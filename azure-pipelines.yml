@@ -35,8 +35,9 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy ARM file to: $(Build.ArtifactStagingDirectory)'
   inputs:
-    Contents: 'ARM\api-app.json'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)\ARM'
+    sourceFolder: '$(Build.SourcesDirectory)\ARM'
+    Contents: '*.json'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
   displayName: 'publish artifacts'
