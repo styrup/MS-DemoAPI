@@ -28,5 +28,12 @@ stages:
         tags: |
           $(tag)
 
+    - task: CopyFiles@2
+      displayName: 'Copy files to: $(Build.ArtifactStagingDirectory)'
+      inputs:
+        sourceFolder: '$(Build.SourcesDirectory)'
+        Contents: '**'
+        TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
     - task: PublishBuildArtifacts@1
       displayName: 'publish artifacts'
