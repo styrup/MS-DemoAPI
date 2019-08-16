@@ -35,7 +35,7 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy ARM file to: $(Build.ArtifactStagingDirectory)'
   inputs:
-    sourceFolder: '$(Build.SourcesDirectory)\ARM'
+    sourceFolder: '$(Build.SourcesDirectory)/ARM'
     Contents: '*.json'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
