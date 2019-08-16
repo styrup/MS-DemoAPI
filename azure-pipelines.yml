@@ -37,7 +37,7 @@ steps:
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)/ARM'
     Contents: '*.json'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/ARM'
 
 - task: PublishBuildArtifacts@1
   displayName: 'publish artifacts'
