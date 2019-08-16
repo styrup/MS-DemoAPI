@@ -32,7 +32,7 @@ steps:
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: true
 
-- task:
+- task: CopyFiles@2
   displayName: 'Copy ARM file to: $(Build.ArtifactStagingDirectory)'
   inputs:
     Contents: 'ARM\api-app.json'
